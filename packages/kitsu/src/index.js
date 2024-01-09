@@ -239,7 +239,7 @@ export default class Kitsu {
         ...config.axiosOptions
       })
 
-      return responseHeaders ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
+      return responseHeaders && Object.keys(responseHeaders).length !== 0 ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
     } catch (E) {
       throw error(E)
     }
@@ -303,7 +303,7 @@ export default class Kitsu {
         }
       )
 
-      return responseHeaders ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
+      return responseHeaders && Object.keys(responseHeaders).length !== 0 ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
     } catch (E) {
       throw error(E)
     }
@@ -364,7 +364,7 @@ export default class Kitsu {
         }
       )
 
-      return responseHeaders ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
+      return responseHeaders && Object.keys(responseHeaders).length !== 0 ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
     } catch (E) {
       throw error(E)
     }
@@ -418,7 +418,7 @@ export default class Kitsu {
         ...config.axiosOptions
       })
 
-      return responseHeaders ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
+      return responseHeaders && Object.keys(responseHeaders).length !== 0 ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
     } catch (E) {
       throw error(E)
     }
@@ -528,7 +528,7 @@ export default class Kitsu {
         ...axiosOptions
       })
 
-      return responseHeaders ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
+      return responseHeaders && Object.keys(responseHeaders).length !== 0 ? { ...deserialise(data), ...{ headers: responseHeaders } } : deserialise(data)
     } catch (E) {
       throw error(E)
     }
